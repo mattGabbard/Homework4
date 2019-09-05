@@ -16,7 +16,7 @@ public class TestScores {
         int grade2 = 0;
         int grade3 = 0;
         final int numberOfGrades = 3; 
-        String letterGrade = null;
+        //
         
         System.out.println("Please ensure all entries are positive numbers.");
         do {
@@ -34,13 +34,31 @@ public class TestScores {
        
         int averageGrade = (grade1 + grade2 + grade3)/numberOfGrades;
         
-        switch (averageGrade){
-            case 1: 90 <= averageGrade && averageGrade <= 100;
-                letterGrade = "A";
-            case 2: 80 <= averageGrade && averageGrade <= 89
-        }
-               
+        char gradeLetter = gradeReturn(averageGrade);
         
+        System.out.println("Average grade is " + averageGrade);
+        System.out.println("Grade letter is " + gradeLetter);
     }
-    
+    public static char gradeReturn(int averageGrade) {
+        
+        char letterGrade = 'z';
+        
+        switch (letterGrade){
+            case 1: if (90 >= averageGrade && averageGrade <= 100){
+                letterGrade = 'A';}
+                return letterGrade;
+            case 2: if (80 >= averageGrade && averageGrade <= 89){
+                letterGrade = 'B';}
+                return letterGrade;
+            case 3: if (70 >= averageGrade && averageGrade <= 79){
+                letterGrade = 'C';}
+                return letterGrade;
+            case 4: if (60 >= averageGrade && averageGrade <= 69){
+                letterGrade = 'D';}
+                return letterGrade;
+            case 5: if (averageGrade <= 59){
+                letterGrade = 'F';}
+                return letterGrade;
+        }
+    }
 }
