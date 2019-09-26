@@ -7,9 +7,16 @@
 /**
  *
  * @author 0749489
- */
+ */import java.util.Scanner;
 public class PaintJob {
     public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
         
+        System.out.println("Please enter the square footage of the room.");
+        double sqFtOfWallSpace = scan.nextDouble();
+        PaintJobEstimator myPaintJob = new PaintJobEstimator();
+        myPaintJob.setSqFtOfWallSpace(sqFtOfWallSpace);
+        System.out.println(myPaintJob.getCostOfLabor());
+     System.out.println(myPaintJob.getGallonsOfPaint());
     }
 }
