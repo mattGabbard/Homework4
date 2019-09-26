@@ -16,7 +16,9 @@ public class PaintJob {
         double sqFtOfWallSpace = scan.nextDouble();
         PaintJobEstimator myPaintJob = new PaintJobEstimator();
         myPaintJob.setSqFtOfWallSpace(sqFtOfWallSpace);
-        System.out.println(myPaintJob.getCostOfLabor());
+        myPaintJob.setGallonsOfPaint();
+        myPaintJob.setCostOfPaint();
+        System.out.println(myPaintJob.getCostOfPaint());
      System.out.println(myPaintJob.getGallonsOfPaint());
     }
 }
